@@ -115,32 +115,49 @@ if [ -n "${ACCELERATE_CONFIG:-}" ] && [ -f "${ACCELERATE_CONFIG}" ]; then
     echo "Using accelerate config: ${ACCELERATE_CONFIG}"
 fi
 
-set -x
-start_time=$(date +%s)
-accelerate launch $ACCEL_CONFIG_ARGS --mixed_precision "${MIXED_PRECISION:-bf16}" $MULTI_NODE_ARGS $MAIN_PY "$@"
-echo "Training time: $(( $(date +%s) - start_time )) seconds"
-set +x
-
-# Export last checkpoint to deployment format (rank 0 only, single GPU)
-if [ "${SLURM_PROCID:-0}" = "0" ]; then
-    OUTPUT_DIR=$(python3 -c "
+OUTPUT_DIR=$(python3 -c "
 import sys
 for arg in sys.argv[1:]:
     if arg.startswith('training.output_dir='):
         print(arg.split('=', 1)[1])
         break
 " "$@")
+# A verdict left in a reused output_dir by an earlier run must never be read as this run's.
+if [ "${SLURM_PROCID:-0}" = "0" ] && [ -n "$OUTPUT_DIR" ]; then
+    rm -f "${OUTPUT_DIR}/regression_check.json"
+fi
 
+set -x
+start_time=$(date +%s)
+# The ERR trap only records a failure and lets the script go on, so test the status here:
+# a crashed run must not export or write a regression verdict from whatever checkpoints
+# and trainer_state.json it, or an earlier run, left behind.
+if accelerate launch $ACCEL_CONFIG_ARGS --mixed_precision "${MIXED_PRECISION:-bf16}" $MULTI_NODE_ARGS $MAIN_PY "$@"; then
+    TRAIN_STATUS=0
+else
+    # The if suppresses the ERR trap, so report as it would; $? is still the launch status.
+    error_handler "$0" "$LINENO"
+    TRAIN_STATUS=1
+fi
+echo "Training time: $(( $(date +%s) - start_time )) seconds"
+set +x
+
+if [ "$TRAIN_STATUS" != 0 ]; then
+    echo "ERROR: training failed; skipping export and regression check." >&2
+# Export last checkpoint to deployment format (rank 0 only, single GPU)
+elif [ "${SLURM_PROCID:-0}" = "0" ]; then
     if [ -n "$OUTPUT_DIR" ]; then
         # Export all checkpoints that don't already have an exported version
         EXPORTED=0
-        for CKPT in $(ls -d ${OUTPUT_DIR}/checkpoint-* 2>/dev/null | sort -t- -k2 -n); do
+        for CKPT in "${OUTPUT_DIR}"/checkpoint-*; do
+            [ -d "$CKPT" ] || continue
             STEP=$(basename "$CKPT" | sed 's/checkpoint-//')
             EXPORT_DIR="${OUTPUT_DIR}/exported-checkpoint-${STEP}"
-            if [ -d "$EXPORT_DIR" ]; then
+            if [ -f "${EXPORT_DIR}/config.json" ]; then
                 echo "Already exported: ${EXPORT_DIR}"
                 continue
             fi
+            rm -rf "${EXPORT_DIR}"
             echo "=== Exporting: ${CKPT} → ${EXPORT_DIR} ==="
             CUDA_VISIBLE_DEVICES=0 python3 modules/Model-Optimizer/examples/speculative_decoding/scripts/export_hf_checkpoint.py \
                 --model_path "${CKPT}" \
@@ -148,12 +165,14 @@ for arg in sys.argv[1:]:
                 --trust_remote_code
             EXPORTED=$((EXPORTED + 1))
         done
-        # Also export final model if saved directly to output_dir
-        if [ -f "${OUTPUT_DIR}/modelopt_state.pth" ] && [ ! -d "${OUTPUT_DIR}/exported-checkpoint-final" ]; then
-            echo "=== Exporting: ${OUTPUT_DIR} → ${OUTPUT_DIR}/exported-checkpoint-final ==="
+        FINAL_EXPORT="${OUTPUT_DIR}/exported-checkpoint-final"
+        if [ -f "${OUTPUT_DIR}/modelopt_state.pth" ] && { [ ! -f "${FINAL_EXPORT}/config.json" ] || \
+            [ "${OUTPUT_DIR}/modelopt_state.pth" -nt "${FINAL_EXPORT}/config.json" ]; }; then
+            rm -rf "${FINAL_EXPORT}"
+            echo "=== Exporting: ${OUTPUT_DIR} → ${FINAL_EXPORT} ==="
             CUDA_VISIBLE_DEVICES=0 python3 modules/Model-Optimizer/examples/speculative_decoding/scripts/export_hf_checkpoint.py \
                 --model_path "${OUTPUT_DIR}" \
-                --export_path "${OUTPUT_DIR}/exported-checkpoint-final" \
+                --export_path "${FINAL_EXPORT}" \
                 --trust_remote_code
             EXPORTED=$((EXPORTED + 1))
         fi
