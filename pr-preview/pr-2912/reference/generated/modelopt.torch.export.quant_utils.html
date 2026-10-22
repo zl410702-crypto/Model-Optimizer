@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="green" data-content_root="../../">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>quant_utils - Model Optimizer 0.0.1.dev1+g212e319d7</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="quantized_weight_export" href="modelopt.torch.export.quantized_weight_export.html" /><link rel="prev" title="quant_format" href="modelopt.torch.export.quant_format.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>quant_utils - Model Optimizer 0.0.1.dev1+g2af255fa7</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="quantized_weight_export" href="modelopt.torch.export.quantized_weight_export.html" /><link rel="prev" title="quant_format" href="modelopt.torch.export.quant_format.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=e1a1ceaf" />
@@ -709,7 +709,7 @@ as a fallback for the unified Megatron export path.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="modelopt.torch.export.quant_utils.get_quant_config">
-<span class="sig-name descname"><span class="pre">get_quant_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_modelopt_qlora</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modelopt.torch.export.quant_utils.get_quant_config" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_quant_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_modelopt_qlora</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_kv_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modelopt.torch.export.quant_utils.get_quant_config" title="Link to this definition">#</a></dt>
 <dd><p>Generate quantization config for a model.</p>
 <p>The model should be the root model. It can be fully quantized, partially quantized or
 mixed-precision quantized.</p>
@@ -718,6 +718,8 @@ mixed-precision quantized.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model</strong> (<em>Module</em>) – The PyTorch model to make config for.</p></li>
 <li><p><strong>is_modelopt_qlora</strong> (<em>bool</em>) – Whether the model is a modelopt-trained QLoRA model.</p></li>
+<li><p><strong>include_kv_cache</strong> (<em>bool</em>) – Infer KV-cache metadata from attention quantizers. Disable
+for diffusion models, whose attention quantizers do not represent a cache.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
