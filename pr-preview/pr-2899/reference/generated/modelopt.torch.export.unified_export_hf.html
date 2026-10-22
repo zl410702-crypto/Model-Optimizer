@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="green" data-content_root="../../">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>unified_export_hf - Model Optimizer 0.0.1.dev1+ga1dcb8146</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="unified_export_hf_streaming" href="modelopt.torch.export.unified_export_hf_streaming.html" /><link rel="prev" title="tensorrt_llm_utils" href="modelopt.torch.export.trtllm.tensorrt_llm_utils.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>unified_export_hf - Model Optimizer 0.0.1.dev1+gbd6e9c390</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="unified_export_hf_streaming" href="modelopt.torch.export.unified_export_hf_streaming.html" /><link rel="prev" title="tensorrt_llm_utils" href="modelopt.torch.export.trtllm.tensorrt_llm_utils.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=e1a1ceaf" />
@@ -479,7 +479,12 @@ to export. If None, all components are exported.</p></li>
 <li><p><strong>max_shard_size</strong> (<em>int</em><em> | </em><em>str</em>) – Maximum size of each safetensors shard file. Defaults to “10GB”.</p></li>
 <li><p><strong>**kwargs</strong> – Runtime-specific post-processing options forwarded to
 <code class="xref py py-func docutils literal notranslate"><span class="pre">_postprocess_safetensors()</span></code> for diffusion model exports.
-See its docstring for supported keys.</p></li>
+See its docstring for supported keys. Diffusion exports also accept
+<code class="docutils literal notranslate"><span class="pre">export_attention_quantizers=True</span></code> to retain enabled Q/K/V BMM quantizer
+state for runtimes using legacy <code class="docutils literal notranslate"><span class="pre">*_bmm_quantizer._amax</span></code> keys, or False
+to omit it. When unspecified, FLUX.1 retains enabled Q/K/V quantizers for
+runtime compatibility; other diffusion components omit them.
+Transformers components always retain them for KV-cache scales.</p></li>
 </ul>
 </dd>
 </dl>
