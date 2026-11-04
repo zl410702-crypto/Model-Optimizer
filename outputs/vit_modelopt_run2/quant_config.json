@@ -1,0 +1,76 @@
+{
+  "modelopt_version": "0.41.0",
+  "source_weights": "/home/eric/workspace/Model-Optimizer-0.41.0/examples/onnx_ptq/work_vit/vit_base_patch16_224.onnx",
+  "pretrained_provenance": "沿用来源 ONNX 参数；该 ONNX 未记录可验证的预训练 checkpoint 来源。",
+  "calibration_data": "/home/eric/workspace/Model-Optimizer-0.41.0/examples/onnx_ptq/work_vit/calib64.npy",
+  "calibration_provenance": "复用现有 calib64.npy；文件没有数据集来源元信息，无法核实样本来源。",
+  "quant_config": {
+    "quant_cfg": {
+      "*weight_quantizer": {
+        "num_bits": 8,
+        "axis": 0
+      },
+      "*input_quantizer": {
+        "num_bits": 8,
+        "axis": null
+      },
+      "nn.BatchNorm1d": {
+        "*": {
+          "enable": false
+        }
+      },
+      "nn.BatchNorm2d": {
+        "*": {
+          "enable": false
+        }
+      },
+      "nn.BatchNorm3d": {
+        "*": {
+          "enable": false
+        }
+      },
+      "nn.LeakyReLU": {
+        "*": {
+          "enable": false
+        }
+      },
+      "*lm_head*": {
+        "enable": false
+      },
+      "*proj_out.*": {
+        "enable": false
+      },
+      "*block_sparse_moe.gate*": {
+        "enable": false
+      },
+      "*router*": {
+        "enable": false
+      },
+      "*mlp.gate.*": {
+        "enable": false
+      },
+      "*mlp.shared_expert_gate.*": {
+        "enable": false
+      },
+      "*linear_attn.conv1d*": {
+        "enable": false
+      },
+      "*mixer.conv1d*": {
+        "enable": false
+      },
+      "*output_layer*": {
+        "enable": false
+      },
+      "output.*": {
+        "enable": false
+      },
+      "default": {
+        "enable": false
+      }
+    },
+    "algorithm": "max"
+  },
+  "calibration_samples": 64,
+  "calibration_batch_size": 8,
+  "onnx_opset": 17
+}

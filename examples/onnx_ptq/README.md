@@ -127,6 +127,22 @@ The top5 accuracy of the model is <accuracy score between 0-100%>
 Inference latency of the model is <X> ms
 ```
 
+### Build a TensorRT engine without running inference
+
+`build_vit_trt_engine.cpp` provides a small C++ alternative to `trtexec`. It parses a Q/DQ ONNX model, builds an INT8 engine, and exports detailed layer information as JSON. It requires TensorRT, CUDA headers, and a GPU-enabled runtime. Set the include and library paths for your TensorRT installation, then build and run it:
+
+```bash
+export TENSORRT_INCLUDE_DIR=/path/to/TensorRT/include
+export TENSORRT_LIB_DIR=/path/to/TensorRT/lib
+./build_vit_trt_engine.sh
+./build_vit_trt_engine \
+    work_vit/vit_base_patch16_224_int8.onnx \
+    work_vit/vit_int8.plan \
+    work_vit/vit_int8_layers.json
+```
+
+The optional fourth argument sets the workspace limit in MiB (default: 1024). The engine build uses TensorRT's INT8 builder flag to enable Q/DQ quantized layers; it does not run inference.
+
 ## Advanced Features
 
 ### Per node calibration of ONNX models

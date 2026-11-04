@@ -1,0 +1,53 @@
+ONNX Checker: PASS
+Producer: pytorch 2.8.0
+IR version: 8
+Opset: [('ai.onnx', 17)]
+Input: [('images', 'FLOAT', [1, 3, 224, 224])]
+Output: [('logits', 'FLOAT', [1, 1000])]
+Node count: 952
+QuantizeLinear: 100
+DequantizeLinear: 100
+Q scale/zero-point/axis distributions: {(None, ((), 'float32'), ((), 'int8')): 50, (0, ((768,), 'float32'), ((768,), 'int8')): 25, (0, ((2304,), 'float32'), ((2304,), 'int8')): 12, (0, ((3072,), 'float32'), ((3072,), 'int8')): 12, (0, ((1000,), 'float32'), ((1000,), 'int8')): 1}
+Q/DQ numerical summary by source tensor class:
+  activation: count=50, axes={None: 50}, scale_shapes={(): 50}, scale_dtype=FLOAT, scale_range=(0.00787401572,1.57012379), zero_point_dtype={'int8': 50}, zero_point_values=[0]
+  weight: count=50, axes={0: 50}, scale_shapes={(768,): 25, (2304,): 12, (3072,): 12, (1000,): 1}, scale_dtype=FLOAT, scale_range=(1.35610712e-09,0.0138247535), zero_point_dtype={'int8': 50}, zero_point_values=[0]
+Q output dtype: INT8 (from signed INT8 zero point); DQ output dtype: FLOAT
+MatMul/Gemm count: 73
+Linear input activations with direct DQ: 49
+Linear weights with traceable initializer->Q->DQ path: 49
+
+Operator counts:
+Constant: 328
+QuantizeLinear: 100
+DequantizeLinear: 100
+Transpose: 85
+Add: 85
+MatMul: 72
+Mul: 37
+Squeeze: 36
+Reshape: 25
+LayerNormalization: 25
+Split: 12
+Softmax: 12
+Div: 12
+Erf: 12
+Concat: 2
+Conv: 1
+Shape: 1
+Slice: 1
+ConstantOfShape: 1
+Equal: 1
+Where: 1
+Expand: 1
+Gather: 1
+Gemm: 1
+
+MatMul/Gemm Q/DQ examples:
+/blocks/blocks.0/attn/qkv/MatMul: activation_input_DQ=True; weight_input_QDQ=True
+/blocks/blocks.0/attn/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/attn/MatMul_1: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/attn/proj/MatMul: activation_input_DQ=True; weight_input_QDQ=True
+/blocks/blocks.0/mlp/fc1/MatMul: activation_input_DQ=True; weight_input_QDQ=True
+/blocks/blocks.0/mlp/fc2/MatMul: activation_input_DQ=True; weight_input_QDQ=True
+/blocks/blocks.1/attn/qkv/MatMul: activation_input_DQ=True; weight_input_QDQ=True
+/blocks/blocks.1/attn/MatMul: activation_input_DQ=False; weight_input_QDQ=False

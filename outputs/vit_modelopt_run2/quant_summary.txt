@@ -1,0 +1,304 @@
+ModelOpt mtq.print_quant_summary():
+patch_embed.proj.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=1.0000 calibrator=MaxCalibrator quant)
+patch_embed.proj.output_quantizer                                                TensorQuantizer(disabled)
+patch_embed.proj.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0062, 0.2958](768) calibrator=MaxCalibrator quant)
+blocks.0.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=18.3242 calibrator=MaxCalibrator quant)
+blocks.0.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.0.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0285, 0.4912](2304) calibrator=MaxCalibrator quant)
+blocks.0.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=3.9446 calibrator=MaxCalibrator quant)
+blocks.0.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.0.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0362, 0.8791](768) calibrator=MaxCalibrator quant)
+blocks.0.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=41.9548 calibrator=MaxCalibrator quant)
+blocks.0.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.0.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0000, 0.3260](3072) calibrator=MaxCalibrator quant)
+blocks.0.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=12.8094 calibrator=MaxCalibrator quant)
+blocks.0.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.0.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0417, 0.2664](768) calibrator=MaxCalibrator quant)
+blocks.1.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=15.6802 calibrator=MaxCalibrator quant)
+blocks.1.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.1.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0336, 0.4313](2304) calibrator=MaxCalibrator quant)
+blocks.1.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=3.8045 calibrator=MaxCalibrator quant)
+blocks.1.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.1.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0301, 0.5075](768) calibrator=MaxCalibrator quant)
+blocks.1.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=31.7533 calibrator=MaxCalibrator quant)
+blocks.1.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.1.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0000, 0.3167](3072) calibrator=MaxCalibrator quant)
+blocks.1.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=3.4449 calibrator=MaxCalibrator quant)
+blocks.1.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.1.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0640, 0.4332](768) calibrator=MaxCalibrator quant)
+blocks.2.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=11.1007 calibrator=MaxCalibrator quant)
+blocks.2.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.2.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0376, 0.3997](2304) calibrator=MaxCalibrator quant)
+blocks.2.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=3.3851 calibrator=MaxCalibrator quant)
+blocks.2.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.2.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0407, 0.1724](768) calibrator=MaxCalibrator quant)
+blocks.2.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=39.1493 calibrator=MaxCalibrator quant)
+blocks.2.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.2.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0497, 0.3513](3072) calibrator=MaxCalibrator quant)
+blocks.2.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=5.3605 calibrator=MaxCalibrator quant)
+blocks.2.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.2.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0607, 0.4315](768) calibrator=MaxCalibrator quant)
+blocks.3.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=20.5182 calibrator=MaxCalibrator quant)
+blocks.3.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.3.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0456, 0.3631](2304) calibrator=MaxCalibrator quant)
+blocks.3.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=2.6305 calibrator=MaxCalibrator quant)
+blocks.3.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.3.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0276, 0.3250](768) calibrator=MaxCalibrator quant)
+blocks.3.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=44.1144 calibrator=MaxCalibrator quant)
+blocks.3.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.3.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0503, 0.3739](3072) calibrator=MaxCalibrator quant)
+blocks.3.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=7.3454 calibrator=MaxCalibrator quant)
+blocks.3.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.3.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0601, 0.6395](768) calibrator=MaxCalibrator quant)
+blocks.4.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=19.6512 calibrator=MaxCalibrator quant)
+blocks.4.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.4.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0437, 0.2894](2304) calibrator=MaxCalibrator quant)
+blocks.4.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=3.1722 calibrator=MaxCalibrator quant)
+blocks.4.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.4.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0382, 0.6078](768) calibrator=MaxCalibrator quant)
+blocks.4.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=46.5125 calibrator=MaxCalibrator quant)
+blocks.4.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.4.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0484, 0.3411](3072) calibrator=MaxCalibrator quant)
+blocks.4.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=10.9689 calibrator=MaxCalibrator quant)
+blocks.4.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.4.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0569, 0.7200](768) calibrator=MaxCalibrator quant)
+blocks.5.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=22.2994 calibrator=MaxCalibrator quant)
+blocks.5.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.5.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0508, 0.2876](2304) calibrator=MaxCalibrator quant)
+blocks.5.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=3.2659 calibrator=MaxCalibrator quant)
+blocks.5.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.5.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0451, 0.1824](768) calibrator=MaxCalibrator quant)
+blocks.5.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=43.6938 calibrator=MaxCalibrator quant)
+blocks.5.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.5.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0464, 0.5101](3072) calibrator=MaxCalibrator quant)
+blocks.5.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=10.9013 calibrator=MaxCalibrator quant)
+blocks.5.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.5.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0313, 0.6871](768) calibrator=MaxCalibrator quant)
+blocks.6.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=21.4994 calibrator=MaxCalibrator quant)
+blocks.6.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.6.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0498, 0.3211](2304) calibrator=MaxCalibrator quant)
+blocks.6.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=3.2629 calibrator=MaxCalibrator quant)
+blocks.6.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.6.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0523, 0.4554](768) calibrator=MaxCalibrator quant)
+blocks.6.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=41.8527 calibrator=MaxCalibrator quant)
+blocks.6.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.6.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0504, 0.3130](3072) calibrator=MaxCalibrator quant)
+blocks.6.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=9.9974 calibrator=MaxCalibrator quant)
+blocks.6.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.6.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0665, 0.6267](768) calibrator=MaxCalibrator quant)
+blocks.7.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=25.0624 calibrator=MaxCalibrator quant)
+blocks.7.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.7.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0447, 0.3159](2304) calibrator=MaxCalibrator quant)
+blocks.7.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=5.3872 calibrator=MaxCalibrator quant)
+blocks.7.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.7.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0550, 0.2920](768) calibrator=MaxCalibrator quant)
+blocks.7.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=22.6068 calibrator=MaxCalibrator quant)
+blocks.7.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.7.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0512, 0.2383](3072) calibrator=MaxCalibrator quant)
+blocks.7.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=8.1317 calibrator=MaxCalibrator quant)
+blocks.7.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.7.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0658, 0.8750](768) calibrator=MaxCalibrator quant)
+blocks.8.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=26.8965 calibrator=MaxCalibrator quant)
+blocks.8.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.8.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0487, 0.2915](2304) calibrator=MaxCalibrator quant)
+blocks.8.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=4.6036 calibrator=MaxCalibrator quant)
+blocks.8.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.8.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0363, 0.5389](768) calibrator=MaxCalibrator quant)
+blocks.8.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=54.1741 calibrator=MaxCalibrator quant)
+blocks.8.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.8.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0469, 0.2361](3072) calibrator=MaxCalibrator quant)
+blocks.8.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=16.5808 calibrator=MaxCalibrator quant)
+blocks.8.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.8.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0704, 0.8719](768) calibrator=MaxCalibrator quant)
+blocks.9.attn.qkv.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=30.2671 calibrator=MaxCalibrator quant)
+blocks.9.attn.qkv.output_quantizer                                               TensorQuantizer(disabled)
+blocks.9.attn.qkv.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0370, 0.1749](2304) calibrator=MaxCalibrator quant)
+blocks.9.attn.proj.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=5.0190 calibrator=MaxCalibrator quant)
+blocks.9.attn.proj.output_quantizer                                              TensorQuantizer(disabled)
+blocks.9.attn.proj.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0415, 0.3509](768) calibrator=MaxCalibrator quant)
+blocks.9.mlp.fc1.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=98.3219 calibrator=MaxCalibrator quant)
+blocks.9.mlp.fc1.output_quantizer                                                TensorQuantizer(disabled)
+blocks.9.mlp.fc1.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0464, 0.1980](3072) calibrator=MaxCalibrator quant)
+blocks.9.mlp.fc2.input_quantizer                                                 TensorQuantizer(8 bit fake per-tensor amax=34.4469 calibrator=MaxCalibrator quant)
+blocks.9.mlp.fc2.output_quantizer                                                TensorQuantizer(disabled)
+blocks.9.mlp.fc2.weight_quantizer                                                TensorQuantizer(8 bit fake axis=0 amax=[0.0589, 0.2819](768) calibrator=MaxCalibrator quant)
+blocks.10.attn.qkv.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=34.0728 calibrator=MaxCalibrator quant)
+blocks.10.attn.qkv.output_quantizer                                              TensorQuantizer(disabled)
+blocks.10.attn.qkv.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0433, 0.2670](2304) calibrator=MaxCalibrator quant)
+blocks.10.attn.proj.input_quantizer                                              TensorQuantizer(8 bit fake per-tensor amax=5.3995 calibrator=MaxCalibrator quant)
+blocks.10.attn.proj.output_quantizer                                             TensorQuantizer(disabled)
+blocks.10.attn.proj.weight_quantizer                                             TensorQuantizer(8 bit fake axis=0 amax=[0.0624, 0.3045](768) calibrator=MaxCalibrator quant)
+blocks.10.mlp.fc1.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=199.4057 calibrator=MaxCalibrator quant)
+blocks.10.mlp.fc1.output_quantizer                                               TensorQuantizer(disabled)
+blocks.10.mlp.fc1.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0192, 0.2281](3072) calibrator=MaxCalibrator quant)
+blocks.10.mlp.fc2.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=64.1172 calibrator=MaxCalibrator quant)
+blocks.10.mlp.fc2.output_quantizer                                               TensorQuantizer(disabled)
+blocks.10.mlp.fc2.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0754, 0.3069](768) calibrator=MaxCalibrator quant)
+blocks.11.attn.qkv.input_quantizer                                               TensorQuantizer(8 bit fake per-tensor amax=20.4029 calibrator=MaxCalibrator quant)
+blocks.11.attn.qkv.output_quantizer                                              TensorQuantizer(disabled)
+blocks.11.attn.qkv.weight_quantizer                                              TensorQuantizer(8 bit fake axis=0 amax=[0.0555, 0.2352](2304) calibrator=MaxCalibrator quant)
+blocks.11.attn.proj.input_quantizer                                              TensorQuantizer(8 bit fake per-tensor amax=8.3858 calibrator=MaxCalibrator quant)
+blocks.11.attn.proj.output_quantizer                                             TensorQuantizer(disabled)
+blocks.11.attn.proj.weight_quantizer                                             TensorQuantizer(8 bit fake axis=0 amax=[0.0691, 0.5640](768) calibrator=MaxCalibrator quant)
+blocks.11.mlp.fc1.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=28.5851 calibrator=MaxCalibrator quant)
+blocks.11.mlp.fc1.output_quantizer                                               TensorQuantizer(disabled)
+blocks.11.mlp.fc1.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0430, 0.5394](3072) calibrator=MaxCalibrator quant)
+blocks.11.mlp.fc2.input_quantizer                                                TensorQuantizer(8 bit fake per-tensor amax=10.8446 calibrator=MaxCalibrator quant)
+blocks.11.mlp.fc2.output_quantizer                                               TensorQuantizer(disabled)
+blocks.11.mlp.fc2.weight_quantizer                                               TensorQuantizer(8 bit fake axis=0 amax=[0.0822, 1.7557](768) calibrator=MaxCalibrator quant)
+head.input_quantizer                                                             TensorQuantizer(8 bit fake per-tensor amax=16.6559 calibrator=MaxCalibrator quant)
+head.output_quantizer                                                            TensorQuantizer(disabled)
+head.weight_quantizer                                                            TensorQuantizer(8 bit fake axis=0 amax=[0.0508, 0.0911](1000) calibrator=MaxCalibrator quant)
+150 TensorQuantizers found in model
+
+Quantizer amax / scale / axis:
+patch_embed.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(1,1), scale_shape=(), scale_range=(0.0078740157,0.0078740157), scale_first=[0.007874015718698502]
+patch_embed.proj.output_quantizer: amax 未设置
+patch_embed.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1, 1, 1), amax_range=(0.0061974656,0.29575258), scale_shape=(768, 1, 1, 1), scale_range=(4.8798942e-05,0.0023287605), scale_first=[0.00012547954975161701, 0.0008080840343609452, 6.923159526195377e-05, 0.0001869300176622346, 0.00011015231575584039]
+blocks.0.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(18.32416,18.32416), scale_shape=(), scale_range=(0.14428473,0.14428473), scale_first=[0.14428472518920898]
+blocks.0.attn.qkv.output_quantizer: amax 未设置
+blocks.0.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.02850434,0.49116737), scale_shape=(2304, 1), scale_range=(0.00022444362,0.0038674595), scale_first=[0.0038674594834446907, 0.001420608488842845, 0.0011786578688770533, 0.0010681786807253957, 0.0011603086022660136]
+blocks.0.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.9446142,3.9446142), scale_shape=(), scale_range=(0.031059954,0.031059954), scale_first=[0.031059954315423965]
+blocks.0.attn.proj.output_quantizer: amax 未设置
+blocks.0.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.036186662,0.87913376), scale_shape=(768, 1), scale_range=(0.00028493433,0.006922313), scale_first=[0.0007473272271454334, 0.000451632309705019, 0.005971812643110752, 0.00046252436004579067, 0.0007803194457665086]
+blocks.0.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(41.954811,41.954811), scale_shape=(), scale_range=(0.33035284,0.33035284), scale_first=[0.3303528428077698]
+blocks.0.mlp.fc1.output_quantizer: amax 未设置
+blocks.0.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(1.722256e-07,0.32603532), scale_shape=(3072, 1), scale_range=(1.3561071e-09,0.0025672072), scale_first=[0.0005695752915926278, 0.0005582893500104547, 0.00108223722781986, 0.0006589409313164651, 0.0006273033795878291]
+blocks.0.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(12.809374,12.809374), scale_shape=(), scale_range=(0.10086121,0.10086121), scale_first=[0.10086121410131454]
+blocks.0.mlp.fc2.output_quantizer: amax 未设置
+blocks.0.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.041681148,0.26639342), scale_shape=(768, 1), scale_range=(0.00032819802,0.0020975859), scale_first=[0.0006160548655316234, 0.0008641174645163119, 0.00038584956200793386, 0.0008689661044627428, 0.0008823003154247999]
+blocks.1.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(15.680205,15.680205), scale_shape=(), scale_range=(0.12346619,0.12346619), scale_first=[0.12346618622541428]
+blocks.1.attn.qkv.output_quantizer: amax 未设置
+blocks.1.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.033634502,0.43134412), scale_shape=(2304, 1), scale_range=(0.0002648386,0.0033964105), scale_first=[0.0009633422596380115, 0.0008157697157002985, 0.0008372378651984036, 0.0009557442390359938, 0.0008985093445517123]
+blocks.1.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.8045049,3.8045049), scale_shape=(), scale_range=(0.029956732,0.029956732), scale_first=[0.02995673194527626]
+blocks.1.attn.proj.output_quantizer: amax 未设置
+blocks.1.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.030062344,0.50745153), scale_shape=(768, 1), scale_range=(0.00023671136,0.0039956812), scale_first=[0.0003940599272027612, 0.0007447657408192754, 0.001962343230843544, 0.0006326904403977096, 0.000818828062620014]
+blocks.1.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(31.753292,31.753292), scale_shape=(), scale_range=(0.25002593,0.25002593), scale_first=[0.2500259280204773]
+blocks.1.mlp.fc1.output_quantizer: amax 未设置
+blocks.1.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(1.6358579e-05,0.31666163), scale_shape=(3072, 1), scale_range=(1.2880771e-07,0.0024933987), scale_first=[0.0008251882391050458, 0.0006092186667956412, 0.0006364054279401898, 0.0006044941837899387, 0.000809191376902163]
+blocks.1.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.4449008,3.4449008), scale_shape=(), scale_range=(0.027125202,0.027125202), scale_first=[0.027125202119350433]
+blocks.1.mlp.fc2.output_quantizer: amax 未设置
+blocks.1.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.063990593,0.43316072), scale_shape=(768, 1), scale_range=(0.00050386292,0.0034107144), scale_first=[0.000677334435749799, 0.0007278137491084635, 0.0014736539451405406, 0.0007032214780338109, 0.0008464846760034561]
+blocks.2.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(11.100716,11.100716), scale_shape=(), scale_range=(0.087407209,0.087407209), scale_first=[0.08740720897912979]
+blocks.2.attn.qkv.output_quantizer: amax 未设置
+blocks.2.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.037647732,0.3997426), scale_shape=(2304, 1), scale_range=(0.00029643884,0.0031475795), scale_first=[0.0008701760089024901, 0.0006302636465989053, 0.0008362890803255141, 0.0009292933391407132, 0.0007643889985047281]
+blocks.2.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.3851378,3.3851378), scale_shape=(), scale_range=(0.026654629,0.026654629), scale_first=[0.026654629036784172]
+blocks.2.attn.proj.output_quantizer: amax 未设置
+blocks.2.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.040682722,0.17237374), scale_shape=(768, 1), scale_range=(0.0003203364,0.0013572735), scale_first=[0.0004816697328351438, 0.00044790556421503425, 0.000725519668776542, 0.000657162512652576, 0.0007054291199892759]
+blocks.2.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(39.149258,39.149258), scale_shape=(), scale_range=(0.30826187,0.30826187), scale_first=[0.3082618713378906]
+blocks.2.mlp.fc1.output_quantizer: amax 未设置
+blocks.2.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.04973764,0.35133865), scale_shape=(3072, 1), scale_range=(0.00039163497,0.0027664462), scale_first=[0.0005574679817073047, 0.0006898340070620179, 0.0006629155832342803, 0.0006229031714610755, 0.0004989991430193186]
+blocks.2.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(5.3605499,5.3605499), scale_shape=(), scale_range=(0.042209055,0.042209055), scale_first=[0.04220905527472496]
+blocks.2.mlp.fc2.output_quantizer: amax 未设置
+blocks.2.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.060712911,0.43150368), scale_shape=(768, 1), scale_range=(0.00047805443,0.0033976668), scale_first=[0.0008655842975713313, 0.0008330629789270461, 0.0011369860731065273, 0.0009521335596218705, 0.0010261175921186805]
+blocks.3.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(20.518192,20.518192), scale_shape=(), scale_range=(0.16156057,0.16156057), scale_first=[0.1615605652332306]
+blocks.3.attn.qkv.output_quantizer: amax 未设置
+blocks.3.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.045557253,0.36311364), scale_shape=(2304, 1), scale_range=(0.00035871853,0.0028591626), scale_first=[0.0008155452669598162, 0.0006604247610084713, 0.0006643554661422968, 0.0006899046711623669, 0.0009255793993361294]
+blocks.3.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(2.6304791,2.6304791), scale_shape=(), scale_range=(0.020712433,0.020712433), scale_first=[0.020712433382868767]
+blocks.3.attn.proj.output_quantizer: amax 未设置
+blocks.3.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.027633989,0.32496274), scale_shape=(768, 1), scale_range=(0.00021759047,0.0025587617), scale_first=[0.000563553418032825, 0.0004805293574463576, 0.0005088323960080743, 0.0005773146403953433, 0.0006524353520944715]
+blocks.3.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(44.114391,44.114391), scale_shape=(), scale_range=(0.34735742,0.34735742), scale_first=[0.3473574221134186]
+blocks.3.mlp.fc1.output_quantizer: amax 未设置
+blocks.3.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.050254535,0.37392351), scale_shape=(3072, 1), scale_range=(0.00039570499,0.0029442797), scale_first=[0.0006499583250842988, 0.0005366611876524985, 0.0005001646932214499, 0.0005319310585036874, 0.000506504497025162]
+blocks.3.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(7.3453598,7.3453598), scale_shape=(), scale_range=(0.057837479,0.057837479), scale_first=[0.05783747881650925]
+blocks.3.mlp.fc2.output_quantizer: amax 未设置
+blocks.3.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.06010424,0.63949329), scale_shape=(768, 1), scale_range=(0.00047326172,0.0050353804), scale_first=[0.0006962467450648546, 0.0006340121617540717, 0.0013215459184721112, 0.0008799167117103934, 0.000657714088447392]
+blocks.4.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(19.651211,19.651211), scale_shape=(), scale_range=(0.15473394,0.15473394), scale_first=[0.15473394095897675]
+blocks.4.attn.qkv.output_quantizer: amax 未设置
+blocks.4.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.043693468,0.28941262), scale_shape=(2304, 1), scale_range=(0.00034404304,0.0022788395), scale_first=[0.0008615784463472664, 0.000986373284831643, 0.0008279727771878242, 0.0007061283686198294, 0.0006588029209524393]
+blocks.4.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.1722374,3.1722374), scale_shape=(), scale_range=(0.024978247,0.024978247), scale_first=[0.02497824653983116]
+blocks.4.attn.proj.output_quantizer: amax 未设置
+blocks.4.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.038219769,0.60777432), scale_shape=(768, 1), scale_range=(0.00030094307,0.0047856243), scale_first=[0.0006574580911546946, 0.00046920785098336637, 0.0008238315931521356, 0.0005117635591886938, 0.000528207456227392]
+blocks.4.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(46.512486,46.512486), scale_shape=(), scale_range=(0.36624005,0.36624005), scale_first=[0.3662400543689728]
+blocks.4.mlp.fc1.output_quantizer: amax 未设置
+blocks.4.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.048351374,0.34112889), scale_shape=(3072, 1), scale_range=(0.00038071949,0.0026860542), scale_first=[0.0005200179875828326, 0.000707402708940208, 0.0007174679194577038, 0.0006373199285008013, 0.0004942934610880911]
+blocks.4.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(10.968933,10.968933), scale_shape=(), scale_range=(0.086369552,0.086369552), scale_first=[0.08636955171823502]
+blocks.4.mlp.fc2.output_quantizer: amax 未设置
+blocks.4.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.056907851,0.72000766), scale_shape=(768, 1), scale_range=(0.00044809331,0.0056693517), scale_first=[0.0006127924425527453, 0.0006532310508191586, 0.002178539987653494, 0.000595040328335017, 0.000928188266698271]
+blocks.5.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(22.299364,22.299364), scale_shape=(), scale_range=(0.17558554,0.17558554), scale_first=[0.17558553814888]
+blocks.5.attn.qkv.output_quantizer: amax 未设置
+blocks.5.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.05079041,0.28761721), scale_shape=(2304, 1), scale_range=(0.00039992449,0.0022647025), scale_first=[0.0005625360063277185, 0.0006159182521514595, 0.0007696588290855289, 0.0008181019220501184, 0.0008273163111880422]
+blocks.5.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.2658672,3.2658672), scale_shape=(), scale_range=(0.025715491,0.025715491), scale_first=[0.02571549080312252]
+blocks.5.attn.proj.output_quantizer: amax 未设置
+blocks.5.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.045061193,0.1823948), scale_shape=(768, 1), scale_range=(0.00035481254,0.0014361795), scale_first=[0.0005681145703420043, 0.0005473649362102151, 0.0004992194008082151, 0.000561369233764708, 0.0005375526961870492]
+blocks.5.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(43.693798,43.693798), scale_shape=(), scale_range=(0.34404567,0.34404567), scale_first=[0.3440456688404083]
+blocks.5.mlp.fc1.output_quantizer: amax 未设置
+blocks.5.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.046408586,0.51012319), scale_shape=(3072, 1), scale_range=(0.00036542193,0.0040167179), scale_first=[0.0005777552723884583, 0.0007193433702923357, 0.0005560709396377206, 0.0005813863826915622, 0.0005833602626807988]
+blocks.5.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(10.901318,10.901318), scale_shape=(), scale_range=(0.085837148,0.085837148), scale_first=[0.08583714812994003]
+blocks.5.mlp.fc2.output_quantizer: amax 未设置
+blocks.5.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.031266902,0.68706971), scale_shape=(768, 1), scale_range=(0.00024619608,0.0054099979), scale_first=[0.0009860501158982515, 0.0007501430227421224, 0.0016488926485180855, 0.0009182172943837941, 0.000985266873613]
+blocks.6.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(21.499365,21.499365), scale_shape=(), scale_range=(0.16928634,0.16928634), scale_first=[0.1692863404750824]
+blocks.6.attn.qkv.output_quantizer: amax 未设置
+blocks.6.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.04983709,0.32113278), scale_shape=(2304, 1), scale_range=(0.00039241803,0.0025286046), scale_first=[0.0006514451815746725, 0.0006781279807910323, 0.000774673477280885, 0.0007092759478837252, 0.0006659411592409015]
+blocks.6.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(3.262882,3.262882), scale_shape=(), scale_range=(0.025691984,0.025691984), scale_first=[0.025691984221339226]
+blocks.6.attn.proj.output_quantizer: amax 未设置
+blocks.6.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.052301548,0.45535928), scale_shape=(768, 1), scale_range=(0.00041182322,0.0035855062), scale_first=[0.0008373592863790691, 0.0005123785231262445, 0.0009108740487135947, 0.0005808682763017714, 0.0006267986609600484]
+blocks.6.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(41.852718,41.852718), scale_shape=(), scale_range=(0.32954895,0.32954895), scale_first=[0.3295489549636841]
+blocks.6.mlp.fc1.output_quantizer: amax 未设置
+blocks.6.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.050403815,0.31303024), scale_shape=(3072, 1), scale_range=(0.00039688044,0.002464805), scale_first=[0.00048274945584125817, 0.0006713119801133871, 0.00046100260806269944, 0.0006857301341369748, 0.0005221486208029091]
+blocks.6.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(9.997448,9.997448), scale_shape=(), scale_range=(0.078720063,0.078720063), scale_first=[0.07872006297111511]
+blocks.6.mlp.fc2.output_quantizer: amax 未设置
+blocks.6.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.066518471,0.6266821), scale_shape=(768, 1), scale_range=(0.00052376749,0.0049345046), scale_first=[0.0010294666280969977, 0.0009403014555573463, 0.001111663761548698, 0.0006863845628686249, 0.0009655627654865384]
+blocks.7.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(25.062355,25.062355), scale_shape=(), scale_range=(0.19734138,0.19734138), scale_first=[0.19734138250350952]
+blocks.7.attn.qkv.output_quantizer: amax 未设置
+blocks.7.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.044687789,0.31593364), scale_shape=(2304, 1), scale_range=(0.00035187235,0.0024876664), scale_first=[0.0007860814221203327, 0.000850336451549083, 0.0005798959173262119, 0.0005664855125360191, 0.0008669185335747898]
+blocks.7.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(5.3872104,5.3872104), scale_shape=(), scale_range=(0.042418979,0.042418979), scale_first=[0.04241897910833359]
+blocks.7.attn.proj.output_quantizer: amax 未设置
+blocks.7.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.055045184,0.29200393), scale_shape=(768, 1), scale_range=(0.00043342664,0.0022992436), scale_first=[0.0007121807429939508, 0.0005847800057381392, 0.0006435180548578501, 0.0005692336126230657, 0.0006194425513967872]
+blocks.7.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(22.606766,22.606766), scale_shape=(), scale_range=(0.17800602,0.17800602), scale_first=[0.17800602316856384]
+blocks.7.mlp.fc1.output_quantizer: amax 未设置
+blocks.7.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.051217273,0.23826677), scale_shape=(3072, 1), scale_range=(0.00040328561,0.0018761163), scale_first=[0.0005788558046333492, 0.0005733218276873231, 0.0006534173153340816, 0.00047827602247707546, 0.0004990013549104333]
+blocks.7.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(8.1316509,8.1316509), scale_shape=(), scale_range=(0.064028747,0.064028747), scale_first=[0.06402874737977982]
+blocks.7.mlp.fc2.output_quantizer: amax 未设置
+blocks.7.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.065822497,0.87503064), scale_shape=(768, 1), scale_range=(0.00051828736,0.006890005), scale_first=[0.0007340950542129576, 0.000749961007386446, 0.0007265157764777541, 0.0008134617819450796, 0.0006447471096180379]
+blocks.8.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(26.896486,26.896486), scale_shape=(), scale_range=(0.21178335,0.21178335), scale_first=[0.21178334951400757]
+blocks.8.attn.qkv.output_quantizer: amax 未设置
+blocks.8.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.048702043,0.29145017), scale_shape=(2304, 1), scale_range=(0.00038348066,0.0022948834), scale_first=[0.000590065261349082, 0.0014918060041964054, 0.0006324832793325186, 0.0007083413074724376, 0.0006034945836290717]
+blocks.8.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(4.6035872,4.6035872), scale_shape=(), scale_range=(0.036248717,0.036248717), scale_first=[0.036248717457056046]
+blocks.8.attn.proj.output_quantizer: amax 未设置
+blocks.8.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.036250088,0.53889179), scale_shape=(768, 1), scale_range=(0.00028543378,0.0042432426), scale_first=[0.0005855715135112405, 0.0004788577207364142, 0.0006297866348177195, 0.000701876706443727, 0.0005835178890265524]
+blocks.8.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(54.174057,54.174057), scale_shape=(), scale_range=(0.42656738,0.42656738), scale_first=[0.4265673756599426]
+blocks.8.mlp.fc1.output_quantizer: amax 未设置
+blocks.8.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.046883348,0.23612292), scale_shape=(3072, 1), scale_range=(0.00036916023,0.0018592356), scale_first=[0.0005884018028154969, 0.0004911603173241019, 0.000517286651302129, 0.0005628771614283323, 0.0007143327966332436]
+blocks.8.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(16.580837,16.580837), scale_shape=(), scale_range=(0.13055778,0.13055778), scale_first=[0.13055777549743652]
+blocks.8.mlp.fc2.output_quantizer: amax 未设置
+blocks.8.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.070382312,0.87188733), scale_shape=(768, 1), scale_range=(0.00055419141,0.0068652546), scale_first=[0.0007500574574805796, 0.0009022707235999405, 0.0009069680818356574, 0.0008297592867165804, 0.0007796477875672281]
+blocks.9.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(30.267128,30.267128), scale_shape=(), scale_range=(0.23832384,0.23832384), scale_first=[0.23832383751869202]
+blocks.9.attn.qkv.output_quantizer: amax 未设置
+blocks.9.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.036985904,0.17489827), scale_shape=(2304, 1), scale_range=(0.0002912276,0.0013771517), scale_first=[0.0006860009743832052, 0.0005470094620250165, 0.0005002113757655025, 0.0006516919820569456, 0.0005138954147696495]
+blocks.9.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(5.0190096,5.0190096), scale_shape=(), scale_range=(0.039519761,0.039519761), scale_first=[0.03951976075768471]
+blocks.9.attn.proj.output_quantizer: amax 未设置
+blocks.9.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.041460745,0.3509191), scale_shape=(768, 1), scale_range=(0.00032646256,0.0027631426), scale_first=[0.000567442097235471, 0.000578753009904176, 0.0005918219103477895, 0.0005997418193146586, 0.0005822816747240722]
+blocks.9.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(98.321938,98.321938), scale_shape=(), scale_range=(0.77418846,0.77418846), scale_first=[0.7741884589195251]
+blocks.9.mlp.fc1.output_quantizer: amax 未设置
+blocks.9.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.046352528,0.19800398), scale_shape=(3072, 1), scale_range=(0.00036498054,0.0015590865), scale_first=[0.0005952540086582303, 0.0005984566523693502, 0.0006284595583565533, 0.0006262962706387043, 0.0005549361230805516]
+blocks.9.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(34.446915,34.446915), scale_shape=(), scale_range=(0.27123556,0.27123556), scale_first=[0.27123555541038513]
+blocks.9.mlp.fc2.output_quantizer: amax 未设置
+blocks.9.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.058909062,0.28193521), scale_shape=(768, 1), scale_range=(0.00046385088,0.0022199624), scale_first=[0.0009239513892680407, 0.000799796951469034, 0.0008508065948262811, 0.0007575223571620882, 0.0008003066759556532]
+blocks.10.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(34.072765,34.072765), scale_shape=(), scale_range=(0.26828948,0.26828948), scale_first=[0.2682894766330719]
+blocks.10.attn.qkv.output_quantizer: amax 未设置
+blocks.10.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.043294244,0.26697502), scale_shape=(2304, 1), scale_range=(0.00034089957,0.0021021655), scale_first=[0.0006040767766535282, 0.0005717805470339954, 0.0005390417063608766, 0.0006650793366134167, 0.0010232561035081744]
+blocks.10.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(5.3994508,5.3994508), scale_shape=(), scale_range=(0.04251536,0.04251536), scale_first=[0.042515359818935394]
+blocks.10.attn.proj.output_quantizer: amax 未设置
+blocks.10.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.062405668,0.30453077), scale_shape=(768, 1), scale_range=(0.00049138319,0.0023978802), scale_first=[0.0006037766579538584, 0.000629789603408426, 0.0006141321500763297, 0.0007353852270171046, 0.0007584629929624498]
+blocks.10.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(199.40572,199.40572), scale_shape=(), scale_range=(1.5701238,1.5701238), scale_first=[1.5701237916946411]
+blocks.10.mlp.fc1.output_quantizer: amax 未设置
+blocks.10.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.019238658,0.22812271), scale_shape=(3072, 1), scale_range=(0.0001514855,0.0017962418), scale_first=[0.0006841953145340085, 0.0005700691253878176, 0.0008184108883142471, 0.0005466222646646202, 0.000703704368788749]
+blocks.10.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(64.117203,64.117203), scale_shape=(), scale_range=(0.50485986,0.50485986), scale_first=[0.5048598647117615]
+blocks.10.mlp.fc2.output_quantizer: amax 未设置
+blocks.10.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.075379893,0.30688715), scale_shape=(768, 1), scale_range=(0.00059354247,0.0024164342), scale_first=[0.0011255828430876136, 0.001004743273369968, 0.0008447931613773108, 0.0008922191336750984, 0.0008318205364048481]
+blocks.11.attn.qkv.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(20.402943,20.402943), scale_shape=(), scale_range=(0.16065308,0.16065308), scale_first=[0.16065308451652527]
+blocks.11.attn.qkv.output_quantizer: amax 未设置
+blocks.11.attn.qkv.weight_quantizer: bits=8, axis=0, amax_shape=(2304, 1), amax_range=(0.055485483,0.23521827), scale_shape=(2304, 1), scale_range=(0.00043689358,0.0018521124), scale_first=[0.0006226286059245467, 0.0007298671407625079, 0.0005612209206447005, 0.0006661360966973007, 0.0007145537529140711]
+blocks.11.attn.proj.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(8.3857698,8.3857698), scale_shape=(), scale_range=(0.066029683,0.066029683), scale_first=[0.06602968275547028]
+blocks.11.attn.proj.output_quantizer: amax 未设置
+blocks.11.attn.proj.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.069066212,0.56398159), scale_shape=(768, 1), scale_range=(0.00054382841,0.0044407998), scale_first=[0.0006072279065847397, 0.0006937331054359674, 0.0007078127237036824, 0.0007260967395268381, 0.0007791384123265743]
+blocks.11.mlp.fc1.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(28.585146,28.585146), scale_shape=(), scale_range=(0.22507989,0.22507989), scale_first=[0.22507989406585693]
+blocks.11.mlp.fc1.output_quantizer: amax 未设置
+blocks.11.mlp.fc1.weight_quantizer: bits=8, axis=0, amax_shape=(3072, 1), amax_range=(0.043008991,0.53941572), scale_shape=(3072, 1), scale_range=(0.00033865348,0.0042473678), scale_first=[0.0007679169648326933, 0.0006141328485682607, 0.0008233229746110737, 0.0006768536986783147, 0.0007438809261657298]
+blocks.11.mlp.fc2.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(10.844582,10.844582), scale_shape=(), scale_range=(0.085390404,0.085390404), scale_first=[0.08539040386676788]
+blocks.11.mlp.fc2.output_quantizer: amax 未设置
+blocks.11.mlp.fc2.weight_quantizer: bits=8, axis=0, amax_shape=(768, 1), amax_range=(0.082241014,1.7557437), scale_shape=(768, 1), scale_range=(0.00064756704,0.013824753), scale_first=[0.0007421632180921733, 0.0007223054999485612, 0.0007923773373477161, 0.0008105874876491725, 0.000778635498136282]
+head.input_quantizer: bits=8, axis=None, amax_shape=(), amax_range=(16.655939,16.655939), scale_shape=(), scale_range=(0.13114913,0.13114913), scale_first=[0.13114912807941437]
+head.output_quantizer: amax 未设置
+head.weight_quantizer: bits=8, axis=0, amax_shape=(1000, 1), amax_range=(0.050788071,0.091109343), scale_shape=(1000, 1), scale_range=(0.00039990607,0.00071739638), scale_first=[0.0004770946397911757, 0.0005632822285406291, 0.0004916233592666686, 0.00041367911035194993, 0.0005382562521845102]

@@ -1,0 +1,49 @@
+ONNX Checker: PASS
+Producer: pytorch 2.8.0
+IR version: 8
+Opset: [('ai.onnx', 17)]
+Input: [('images', 'FLOAT', [1, 3, 224, 224])]
+Output: [('logits', 'FLOAT', [1, 1000])]
+Node count: 504
+QuantizeLinear: 0
+DequantizeLinear: 0
+Q scale/zero-point/axis distributions: {}
+Q/DQ numerical summary by source tensor class:
+Q output dtype: INT8 (from signed INT8 zero point); DQ output dtype: FLOAT
+MatMul/Gemm count: 73
+Linear input activations with direct DQ: 0
+Linear weights with traceable initializer->Q->DQ path: 0
+
+Operator counts:
+Constant: 128
+Add: 85
+MatMul: 72
+Transpose: 37
+Mul: 37
+Squeeze: 36
+Reshape: 25
+LayerNormalization: 25
+Split: 12
+Softmax: 12
+Div: 12
+Erf: 12
+Concat: 2
+Conv: 1
+Shape: 1
+Slice: 1
+ConstantOfShape: 1
+Equal: 1
+Where: 1
+Expand: 1
+Gather: 1
+Gemm: 1
+
+MatMul/Gemm Q/DQ examples:
+/blocks/blocks.0/attn/qkv/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/attn/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/attn/MatMul_1: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/attn/proj/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/mlp/fc1/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.0/mlp/fc2/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.1/attn/qkv/MatMul: activation_input_DQ=False; weight_input_QDQ=False
+/blocks/blocks.1/attn/MatMul: activation_input_DQ=False; weight_input_QDQ=False
