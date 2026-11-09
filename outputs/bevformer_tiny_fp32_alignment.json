@@ -1,0 +1,140 @@
+{
+  "modelopt_version": "0.41.0",
+  "torch_version": "2.8.0+cu128",
+  "cuda_runtime": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "checkpoint_sha256": "7305046dbaa4fe8b1fa6d6acb9e0e3d605a70a3c473f763e936103428d2b2f12",
+  "checkpoint_items": 643,
+  "reference": "/home/eric/workspace/bevformer/BEVFormer/golden_tensors_fp32/fcbccedd61424f1b85dcbf8f897f9754_3e8750f3",
+  "stateful_feedback": true,
+  "quantization_enabled": false,
+  "tf32_enabled": false,
+  "frames": {
+    "frame_000": {
+      "backbone/c5.npy": {
+        "MaxAE": 6.794929504394531e-06,
+        "MAE": 3.981223481364093e-08,
+        "MSE": 3.6709073846791876e-14
+      },
+      "fpn/level_0.npy": {
+        "MaxAE": 2.765655517578125e-05,
+        "MAE": 1.2217686424062574e-06,
+        "MSE": 3.0428531160625864e-12
+      },
+      "bev/final_bev.npy": {
+        "MaxAE": 2.0265579223632812e-05,
+        "MAE": 6.795019483991637e-07,
+        "MSE": 9.343977118484909e-13
+      },
+      "detection/cls_scores.npy": {
+        "MaxAE": 0.000316619873046875,
+        "MAE": 1.5621406060677988e-06,
+        "MSE": 1.9098286606499136e-11
+      },
+      "detection/bbox_preds.npy": {
+        "MaxAE": 9.918212890625e-05,
+        "MAE": 1.2526098238999516e-06,
+        "MSE": 1.3871354032809362e-11
+      },
+      "detection/decoded_boxes.npy": {
+        "MaxAE": 0.0001857280731201172,
+        "MAE": 1.918813453206288e-06,
+        "MSE": 6.751562738495486e-11
+      },
+      "detection/decoded_scores.npy": {
+        "MaxAE": 3.904104232788086e-06,
+        "MAE": 2.751251061757406e-07,
+        "MSE": 2.448044544856032e-13
+      },
+      "detection/decoded_labels.npy": {
+        "MaxAE": 0.0,
+        "MAE": 0.0,
+        "MSE": 0.0
+      }
+    },
+    "frame_001": {
+      "backbone/c5.npy": {
+        "MaxAE": 6.556510925292969e-06,
+        "MAE": 4.162972296153613e-08,
+        "MSE": 4.022794974833972e-14
+      },
+      "fpn/level_0.npy": {
+        "MaxAE": 2.47955322265625e-05,
+        "MAE": 1.2573201820487156e-06,
+        "MSE": 3.308817022311786e-12
+      },
+      "bev/final_bev.npy": {
+        "MaxAE": 2.5153160095214844e-05,
+        "MAE": 7.19856277290365e-07,
+        "MSE": 1.0615376707956984e-12
+      },
+      "detection/cls_scores.npy": {
+        "MaxAE": 4.6253204345703125e-05,
+        "MAE": 1.2721176500673647e-06,
+        "MSE": 5.688951466288051e-12
+      },
+      "detection/bbox_preds.npy": {
+        "MaxAE": 8.174777030944824e-05,
+        "MAE": 1.2180898141204362e-06,
+        "MSE": 1.4004649197466253e-11
+      },
+      "detection/decoded_boxes.npy": {
+        "MaxAE": 7.843971252441406e-05,
+        "MAE": 1.3540087308717409e-06,
+        "MSE": 1.959680192556062e-11
+      },
+      "detection/decoded_scores.npy": {
+        "MaxAE": 2.652406692504883e-06,
+        "MAE": 2.586717406908671e-07,
+        "MSE": 1.6947744134003055e-13
+      },
+      "detection/decoded_labels.npy": {
+        "MaxAE": 0.0,
+        "MAE": 0.0,
+        "MSE": 0.0
+      }
+    },
+    "frame_002": {
+      "backbone/c5.npy": {
+        "MaxAE": 8.225440979003906e-06,
+        "MAE": 4.01663272833012e-08,
+        "MSE": 3.8978542022676784e-14
+      },
+      "fpn/level_0.npy": {
+        "MaxAE": 2.09808349609375e-05,
+        "MAE": 1.2338411506789271e-06,
+        "MSE": 3.15032851534158e-12
+      },
+      "bev/final_bev.npy": {
+        "MaxAE": 2.390146255493164e-05,
+        "MAE": 6.89699171245195e-07,
+        "MSE": 9.758689935745985e-13
+      },
+      "detection/cls_scores.npy": {
+        "MaxAE": 7.128715515136719e-05,
+        "MAE": 1.441200574239095e-06,
+        "MSE": 7.9224388695433e-12
+      },
+      "detection/bbox_preds.npy": {
+        "MaxAE": 5.5789947509765625e-05,
+        "MAE": 1.2730688520234791e-06,
+        "MSE": 1.4838305055687765e-11
+      },
+      "detection/decoded_boxes.npy": {
+        "MaxAE": 4.57763671875e-05,
+        "MAE": 1.2454910878053246e-06,
+        "MSE": 1.4231663232656337e-11
+      },
+      "detection/decoded_scores.npy": {
+        "MaxAE": 2.9802322387695312e-06,
+        "MAE": 2.6661902666091916e-07,
+        "MSE": 2.2854843018116357e-13
+      },
+      "detection/decoded_labels.npy": {
+        "MaxAE": 0.0,
+        "MAE": 0.0,
+        "MSE": 0.0
+      }
+    }
+  }
+}
